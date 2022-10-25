@@ -28,15 +28,25 @@ function isInclusive(start: number, end: number): boolean {
 }
 
 function generateMultiplicationTable(start:number, end:number):string {
-  var resultTable=''
+  var multiplicationTable=''
   for (let index = start; index < end; index++) {
-      resultTable += generateExpression(start,index) 
-      resultTable += '\n' 
+      multiplicationTable += generateLineExpression(start,index) 
+      multiplicationTable += '\n' 
   }
-  resultTable += generateExpression(start,end) 
-  return resultTable
+  multiplicationTable += generateLineExpression(start,end) 
+  return multiplicationTable
 }
- 
+
+function generateLineExpression(start: number, end: number): string{
+  var lineExpression =''
+  for (let index = start; index < end; index++) {
+    lineExpression += generateExpression(index,end) 
+    lineExpression += '  ' 
+}
+lineExpression += generateExpression(end,end) 
+return lineExpression 
+}
+
 function generateExpression(start: number, end: number) :string {
   const multiple = start * end
   return start + '*' + end + '=' + multiple
