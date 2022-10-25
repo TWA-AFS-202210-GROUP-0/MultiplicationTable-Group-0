@@ -7,10 +7,11 @@ export class MultiplicationTable {
     }
     else
     {
-      return multiplicationTable(start,end)
+      return generateMultiplicationTable(start,end)
     }
     
   }
+  
 
   
 }
@@ -26,19 +27,19 @@ function isInclusive(start: number, end: number): boolean {
   return start<=10 && start>=1 && end<=10 && end>=1 
 }
 
-function multiplicationTable(start:number, end:number):string {
+function generateMultiplicationTable(start:number, end:number):string {
   var resultTable=''
-  for (let index = start; index < end+1; index++) {
-      resultTable += LineExpression(start,index) 
+  for (let index = start; index < end; index++) {
+      resultTable += generateExpression(start,index) 
       resultTable += '\n' 
   }
+  resultTable += generateExpression(start,end) 
   return resultTable
 }
  
-function LineExpression(start: number, end: number) :string {
-  for (let index = star; index < array.length; index++) {
-    const element = array[index];
-    
-  }
+function generateExpression(start: number, end: number) :string {
+  const multiple = start * end
+  return start + '*' + end + '=' + multiple
 }
+
 
