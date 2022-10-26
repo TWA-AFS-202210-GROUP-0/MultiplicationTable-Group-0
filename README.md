@@ -19,3 +19,4 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 2. Please declare all the functions according to your diagram.
 3. Please write a test case following given...when...then pattern for a leaf block of the diagram. Then implement the block to pass the test. Should only test the `render` method.
 4. Please repeat step 3 until all functions are implemented.
+![avatar](https://s3.cn-north-1.amazonaws.com.cn/tws-upload/images/1666687727527-25b39196-653e-4a1d-9c95-b99cfbd4faaa.png)
