@@ -9,7 +9,6 @@ export class MultiplicationTable {
   }
 
   isInRange1To10(num: number){
-    console.log([...Array(10).keys()].map(i => i + 1))
     return num in [...Array(10).keys()].map(i => i + 1)
   }
 
