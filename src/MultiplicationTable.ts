@@ -8,10 +8,10 @@ export class MultiplicationTable {
     }
     return '';
   }
-  private IsValidStartandEndNumber(start: number, end: number): boolean {
+  public IsValidStartandEndNumber(start: number, end: number): boolean {
     return start <= end;
   }
-  private IsInRange(start: number, end: number): boolean {
+  public IsInRange(start: number, end: number): boolean {
     return (start >= 1) && (start <= 10) && (end >= 1) && (end <= 10);
   }
   private getRange(start: number, end: number): number[]{
