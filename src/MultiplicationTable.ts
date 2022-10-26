@@ -29,7 +29,6 @@ export class MultiplicationTable {
     for(let i = lineStart; i < lineEnd + 1; i++){
       equations.push(this.createEquation(i, lineEnd))
     }
-    console.log(equations)
     return equations.join('  ')
   }
 
