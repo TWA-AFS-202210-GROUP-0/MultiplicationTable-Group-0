@@ -10,10 +10,7 @@ export class MultiplicationTable {
       return generateMultiplicationTable(start,end)
     }
     
-  }
-  
-
-  
+  }  
 }
 
 function  isValidInput(start:number, end:number):boolean {
@@ -42,9 +39,9 @@ function generateLineExpression(start: number, end: number): string{
   for (let index = start; index < end; index++) {
     lineExpression += generateExpression(index,end) 
     lineExpression += '  ' 
-}
-lineExpression += generateExpression(end,end) 
-return lineExpression 
+  }
+  lineExpression += generateExpression(end,end) 
+  return lineExpression 
 }
 
 function generateExpression(start: number, end: number) :string {
