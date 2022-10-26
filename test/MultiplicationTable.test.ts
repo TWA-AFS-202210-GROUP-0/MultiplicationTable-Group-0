@@ -25,6 +25,18 @@ describe('Multiplication Table', () => {
     //then
     expect(rendered).toBe('')
   })
+  it('should return empty given (12, 16)', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 12
+    const end = 16
+
+    //when
+    const rendered = table.render(start, end)
+
+    //then
+    expect(rendered).toBe('')
+  })
   it('should return the three lines for (2, 4)', () => {
     // given
     const table = new MultiplicationTable()
